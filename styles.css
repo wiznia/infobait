@@ -1,0 +1,43 @@
+.stopclickbait {
+  background: blue;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  width: 120px;
+}
+
+.stopclickbait:hover, .stopclickbait:visited {
+  color: #fff;
+}
+
+.popup {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 15px 20px !important;
+  width: 800px;
+}
+
+.popup p {
+  background-color: #ff9800;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 6px;
+  margin: 0 5px 5px 0;
+  float: left;
+}
+
+.button-close {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
