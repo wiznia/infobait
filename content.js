@@ -36,7 +36,7 @@ Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
           response.text().then(text => {
             var parser = new DOMParser();
             var article = parser.parseFromString(text, 'text/html');
-            var bolds = article.querySelectorAll('#article-content .row strong');
+            var bolds = article.querySelectorAll('#article-content .row b');
 
             Array.from(bolds).map(bold => {
               var filteredWords = ['MÁS SOBRE ESTE TEMA:', 'Infobae', ' Infobae', 'Seguí leyendo'];
