@@ -1,4 +1,4 @@
-var headlines = document.querySelectorAll('.headline');
+var headlines = document.querySelectorAll('.black_text');
 
 Array.from(headlines).map(headline => headline.insertAdjacentHTML('afterend', '<a class="stopclickbait" href="#">Disable clickbait!</a>'));
 
@@ -15,7 +15,7 @@ Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
         button.classList.add('active');
         button.nextElementSibling.classList.remove('hidden');
       } else {
-        var link = button.previousElementSibling.querySelector('a').getAttribute('href');
+        var link = button.previousElementSibling.getAttribute('href');
         var popup = document.createElement('div');
         var close = document.createElement('div');
         this.classList.add('active');
@@ -36,7 +36,7 @@ Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
           response.text().then(text => {
             var parser = new DOMParser();
             var article = parser.parseFromString(text, 'text/html');
-            var bolds = article.querySelectorAll('#article-content .row b');
+            var bolds = article.querySelectorAll('.article b');
 
             Array.from(bolds).map(bold => {
               var filteredWords = ['MÁS SOBRE ESTE TEMA:', 'Infobae', ' Infobae', 'Seguí leyendo'];
