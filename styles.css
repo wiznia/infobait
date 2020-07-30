@@ -2,10 +2,11 @@
   background: blue;
   font-size: 12px;
   font-weight: bold;
-  color: #fff;
+  color: #fff !important;
   padding: 4px 8px;
-  margin-bottom: 10px;
-  width: 120px;
+  margin-top: 10px;
+  width: 110px;
+  display: block;
 }
 
 .stopclickbait:hover, .stopclickbait:visited {
