@@ -1,4 +1,4 @@
-var headlines = document.querySelectorAll('.black_text');
+var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm');
 
 Array.from(headlines).map(headline => headline.insertAdjacentHTML('afterend', '<a class="stopclickbait" href="#">Disable clickbait!</a>'));
 
