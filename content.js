@@ -15,7 +15,7 @@ Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
         button.classList.add('active');
         button.nextElementSibling.classList.remove('hidden');
       } else {
-        var link = button.previousElementSibling.getAttribute('href');
+        var link = button.previousElementSibling.querySelector('.cst_ctn').getAttribute('href');
         var popup = document.createElement('div');
         var close = document.createElement('div');
         this.classList.add('active');
