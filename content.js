@@ -1,6 +1,6 @@
-var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm');
+var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm, .fcc_itm');
 
-Array.from(headlines).map(headline => headline.insertAdjacentHTML('afterend', '<a class="stopclickbait" href="#">Disable clickbait!</a>'));
+Array.from(headlines).map(headline => headline.appendChild('<a class="stopclickbait" href="#">Disable clickbait!</a>'));
 
 Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
   button.addEventListener('click', function(e) {
