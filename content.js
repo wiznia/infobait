@@ -1,6 +1,8 @@
 var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm, .fcc_itm');
+var clickbaitButton = document.createElement('a');
+clickBaitButton.innerText = 'Disable clickbait!';
 
-Array.from(headlines).map(headline => headline.appendChild('<a class="stopclickbait" href="#">Disable clickbait!</a>'));
+Array.from(headlines).map(headline => headline.appendChild(clickbaitButton));
 
 Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
   button.addEventListener('click', function(e) {
