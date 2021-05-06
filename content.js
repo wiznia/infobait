@@ -1,8 +1,13 @@
 var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm, .fcc_itm');
-var clickbaitButton = document.createElement('a');
-clickbaitButton.innerText = 'Disable clickbait!';
 
-Array.from(headlines).map(headline => headline.appendChild(clickbaitButton));
+Array.from(headlines).map(headline => {
+  var clickbaitButton = document.createElement('a');
+  clickbaitButton.innerText = 'Disable clickbait!';
+  clickbaitButton.classList = 'stopclickbait';
+  if (headline.querySelector('.cst_ctn .cst_hl')) {
+    headline.querySelector('.cst_ctn .cst_hl').insertAdjacentElement('afterend', clickbaitButton);
+  }
+});
 
 Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
   button.addEventListener('click', function(e) {
@@ -17,7 +22,7 @@ Array.from(document.querySelectorAll('.stopclickbait')).map(button => {
         button.classList.add('active');
         button.nextElementSibling.classList.remove('hidden');
       } else {
-        var link = button.previousElementSibling.querySelector('.cst_ctn').getAttribute('href');
+        var link = button.parentNode.getAttribute('href');
         var popup = document.createElement('div');
         var close = document.createElement('div');
         this.classList.add('active');
