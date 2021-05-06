@@ -42,3 +42,7 @@
   right: 10px;
   cursor: pointer;
 }
+
+.ndc_itm, .tcc_itm, .fcc_itm {
+  flex-wrap: wrap;
+}
