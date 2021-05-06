@@ -1,6 +1,6 @@
 var headlines = document.querySelectorAll('.ndc_itm, .tcc_itm, .fcc_itm');
 var clickbaitButton = document.createElement('a');
-clickBaitButton.innerText = 'Disable clickbait!';
+clickbaitButton.innerText = 'Disable clickbait!';
 
 Array.from(headlines).map(headline => headline.appendChild(clickbaitButton));
 
